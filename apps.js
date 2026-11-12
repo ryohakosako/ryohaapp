@@ -5,14 +5,14 @@
 // 外部ドメインの version.json は CORS の許可が必要です。
 window.APP_LIST = [
   {
-    id: 'tsumilog',
-    name: '積みログ',
+    id: 'iroirokiroku',
+    name: 'いろいろきろく',
     category: 'TRACKER',
     description: '活動・勤務時間・給与をまとめて記録できるWebアプリ。',
     icon: 'calendar',
-    url: '', // 例: 'https://YOURNAME.github.io/tsumilog/'
-    versionUrl: '', // 例: 'https://YOURNAME.github.io/tsumilog/version.json'
-    changelogUrl: '', // 例: 'https://YOURNAME.github.io/tsumilog/changelog/'
-    status: 'development' // 'published' または 'development'
+    url: 'https://ryohakosako.github.io/iroirokiroku/',
+    versionUrl: 'https://ryohakosako.github.io/iroirokiroku/version.json',
+    changelogUrl: 'https://ryohakosako.github.io/iroirokiroku/changelog/',
+    status: 'published' // 'published' または 'development'
   }
 ];
