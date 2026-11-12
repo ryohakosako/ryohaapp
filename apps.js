@@ -18,7 +18,7 @@ window.APP_LIST = [
     id: 'ryohaoc',
     name: '#ryohaoc',
     description: '活動・勤務時間・給与をまとめて記録できるWebアプリ。',
-    icon: 'calendar',
+    icon: 'users',,
     url: 'https://ryohakosako.github.io/ryohaoc/',
     versionUrl: 'https://ryohakosako.github.io/ryohaoc/version.json',
     changelogUrl: 'https://ryohakosako.github.io/ryohaoc/changelog/',
