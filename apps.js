@@ -13,12 +13,12 @@ window.APP_LIST = [
     versionUrl: 'https://ryohakosako.github.io/iroirokiroku/version.json',
     changelogUrl: 'https://ryohakosako.github.io/iroirokiroku/changelog/',
     status: 'published' // 'published' または 'development'
-  }
+  },
    {
     id: 'ryohaoc',
     name: '#ryohaoc',
-    description: '活動・勤務時間・給与をまとめて記録できるWebアプリ。',
-    icon: 'users',,
+    description: 'オリキャラのイラストやプロフィールがみれるwebサイト。',
+    icon: 'users',
     url: 'https://ryohakosako.github.io/ryohaoc/',
     versionUrl: 'https://ryohakosako.github.io/ryohaoc/version.json',
     changelogUrl: 'https://ryohakosako.github.io/ryohaoc/changelog/',
