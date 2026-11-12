@@ -7,12 +7,21 @@ window.APP_LIST = [
   {
     id: 'iroirokiroku',
     name: 'いろいろきろく',
-    category: 'TRACKER',
     description: '活動・勤務時間・給与をまとめて記録できるWebアプリ。',
     icon: 'calendar',
     url: 'https://ryohakosako.github.io/iroirokiroku/',
     versionUrl: 'https://ryohakosako.github.io/iroirokiroku/version.json',
     changelogUrl: 'https://ryohakosako.github.io/iroirokiroku/changelog/',
+    status: 'published' // 'published' または 'development'
+  }
+   {
+    id: 'ryohaoc',
+    name: '#ryohaoc',
+    description: '活動・勤務時間・給与をまとめて記録できるWebアプリ。',
+    icon: 'calendar',
+    url: 'https://ryohakosako.github.io/ryohaoc/',
+    versionUrl: 'https://ryohakosako.github.io/ryohaoc/version.json',
+    changelogUrl: 'https://ryohakosako.github.io/ryohaoc/changelog/',
     status: 'published' // 'published' または 'development'
   }
 ];

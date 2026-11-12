@@ -67,7 +67,6 @@ function renderApp(app) {
   iconBox.append(makeIcon(app.icon));
   const state = el('span', app.status === 'published' ? 'state published' : 'state development', app.status === 'published' ? '公開中' : '開発中');
   top.append(iconBox, state);
-  const category = el('div', 'category', app.category || 'WEB APP');
   const title = el('h3', 'app-name', app.name);
   const description = el('p', 'app-description', app.description || '');
   const bottom = el('div', 'card-bottom');
@@ -84,8 +83,8 @@ function renderApp(app) {
     bottom.append(el('span', 'unavailable', '準備中'));
   }
   const changeUrl = safeUrl(app.changelogUrl);
-  if (changeUrl) card.append(top, category, title, description, bottom, makeLink('更新履歴を見る →', changeUrl, 'changelog-link'));
-  else card.append(top, category, title, description, bottom);
+  if (changeUrl) card.append(top, title, description, bottom, makeLink('更新履歴を見る →', changeUrl, 'changelog-link'));
+  else card.append(top, title, description, bottom);
   fetchVersion(app, badge, date);
   return card;
 }
