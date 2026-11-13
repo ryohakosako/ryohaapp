@@ -42,6 +42,22 @@ async function fetchVersion(app, badge, date) {
     console.warn(`Version fetch failed: ${app.id}`, error);
   }
 }
+async function fetchAppName(app, label) {
+  // Metadata is published alongside version.json by the existing site builder.
+  const versionUrl = safeUrl(app.versionUrl);
+  if (!versionUrl) return;
+  try {
+    const infoUrl = new URL('app-info.json', versionUrl).href;
+    const response = await fetch(infoUrl, { cache: 'no-store' });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+    if (!data || typeof data.name !== 'string' || !data.name.trim()) throw new Error('Invalid app name');
+    label.textContent = data.name.trim();
+  } catch (error) {
+    // Keep the configured fallback name and the existing link on failure.
+    console.warn(`App name fetch failed: ${app.id}`, error);
+  }
+}
 function renderApp(app) {
   const card = el('article', 'app-card');
   const top = el('div', 'card-top');
@@ -49,8 +65,11 @@ function renderApp(app) {
   top.append(state);
   const title = el('h3', 'app-name');
   const url = safeUrl(app.url);
-  if (app.status === 'published' && url) title.append(makeLink(app.name, url, 'app-title-link'));
-  else title.textContent = app.name;
+  const titleLabel = app.status === 'published' && url
+    ? makeLink(app.name, url, 'app-title-link')
+    : el('span', '', app.name);
+  title.append(titleLabel);
+  fetchAppName(app, titleLabel);
   const description = el('p', 'app-description', app.description || '');
   const bottom = el('div', 'card-bottom');
   const info = el('div', 'version-info');

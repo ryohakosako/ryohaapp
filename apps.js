@@ -1,6 +1,7 @@
 // ここにアプリを追加してください。
 // url: 公開済みアプリのURL。未公開なら空文字にします。
 // versionUrl: アプリが公開する version.json のURL。
+// アプリ名は同じ階層の app-info.json から取得。name は読込中・失敗時の表示名。
 // 空文字の場合はバージョン表示を省略します。
 // 外部ドメインの version.json は CORS の許可が必要です。
 window.APP_LIST = [
